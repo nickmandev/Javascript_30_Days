@@ -7,6 +7,19 @@
 </head>
 <body>
 <script>
+  let conamiCode = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight",
+  "ArrowLeft","ArrowRight","b","a"]
+  let arr = []
+  function conamiCodeCheck(e){
+  arr.push(e.key)
+  arr.splice(-conamiCode.length -1,arr.length - conamiCode.length)
+  if(arr.join('').includes(conamiCode.join(''))){
+    console.log('ding ding you got it')
+  }
+  }
+  window.addEventListener('keyup', (e) => {
+    conamiCodeCheck(e)
+  })
 </script>
 </body>
 </html>
